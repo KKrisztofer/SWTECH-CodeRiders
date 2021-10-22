@@ -8,9 +8,9 @@ Csapat neve: CodeRiders
 ## Feladatok
 
 ### H1
-A feladat a [Wiki](https://github.com/KKrisztofer/SWTECH-CodeRiders/wiki/Projekt-bemutatása-(H1))-ben található.
+A feladat a [Wiki](https://github.com/KKrisztofer/SWTECH-CodeRiders/wiki/H1)-ben található.
 ### H2
-A feladat a [Wiki](https://github.com/KKrisztofer/SWTECH-CodeRiders/wiki/Vízió-dokumentum-(H2))-ben található.
+A feladat a [Wiki](https://github.com/KKrisztofer/SWTECH-CodeRiders/wiki/H2)-ben található.
 ### H3
 A feladat a [Wiki](https://github.com/KKrisztofer/SWTECH-CodeRiders/wiki/Software-követelmény-specifikáció-(H3))-ben található.
 ### H4
