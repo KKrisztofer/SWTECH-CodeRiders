@@ -27,7 +27,7 @@ CREATE TABLE Alapanyagok
   id INT NOT NULL,
   elnevezes VARCHAR(20) NOT NULL,
   mertekegyseg VARCHAR(2) NOT NULL,
-  rogzitesDatum DATE NOT NULL,
+  rogzitesDatum DATETIME NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -37,7 +37,7 @@ CREATE TABLE Termekek
   elnevezes VARCHAR(30) NOT NULL,
   tipus BOOLEAN NOT NULL,
   ar INT NOT NULL,
-  rogzitesDatum DATE NOT NULL,
+  rogzitesDatum DATETIME NOT NULL,
   kategoria INT NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (kategoria) REFERENCES Kategoriak(id)
@@ -57,7 +57,7 @@ CREATE TABLE Menuk
   id INT NOT NULL,
   elnevezes VARCHAR(30) NOT NULL,
   ar INT NOT NULL,
-  rogzitesDatum DATE NOT NULL,
+  rogzitesDatum DATETIME NOT NULL,
   PRIMARY KEY (id)
 );
 
@@ -73,7 +73,7 @@ CREATE TABLE TermekTartalmazas
 CREATE TABLE AlapanyagRaktar
 (
   mennyiseg INT NOT NULL,
-  utolsoBovites DATE NOT NULL,
+  utolsoBovites DATETIME NOT NULL,
   minimum INT,
   alapanyagID INT NOT NULL,
   FOREIGN KEY (alapanyagID) REFERENCES Alapanyagok(id)
@@ -82,7 +82,7 @@ CREATE TABLE AlapanyagRaktar
 CREATE TABLE TermekRaktar
 (
   mennyiseg INT NOT NULL,
-  utolsoBovites DATE NOT NULL,
+  utolsoBovites DATETIME NOT NULL,
   minimum INT,
   termekID INT NOT NULL,
   FOREIGN KEY (termekID) REFERENCES Termekek(id)
@@ -101,7 +101,7 @@ CREATE TABLE Felhasznalok
   nev VARCHAR(30) NOT NULL,
   email VARCHAR(30) NOT NULL,
   jelszo VARCHAR(300) NOT NULL,
-  rogzitesDatum DATE NOT NULL,
+  rogzitesDatum DATETIME NOT NULL,
   jogosultsag INT NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (jogosultsag) REFERENCES Jogosultsagok(id)
@@ -113,7 +113,7 @@ CREATE TABLE Vendegek
   nev VARCHAR(30) NOT NULL,
   telefon VARCHAR(11) NOT NULL,
   cim VARCHAR(40) NOT NULL,
-  rogzitesDatum DATE NOT NULL,
+  rogzitesDatum DATETIME NOT NULL,
   email VARCHAR(30) NOT NULL,
   irSzam VARCHAR(4) NOT NULL,
   PRIMARY KEY (id),
@@ -123,7 +123,7 @@ CREATE TABLE Vendegek
 CREATE TABLE Rendelesek
 (
   id INT NOT NULL,
-  datum DATE NOT NULL,
+  datum DATETIME NOT NULL,
   osszeg INT NOT NULL,
   tipus BOOLEAN NOT NULL,
   aktiv BOOLEAN NOT NULL,
@@ -154,7 +154,7 @@ CREATE TABLE RendeltMenuk
 
 CREATE TABLE Szallitas
 (
-  kezbesitveDatum DATE NOT NULL,
+  kezbesitveDatum DATETIME NOT NULL,
   rendelesID INT NOT NULL,
   futarID INT NOT NULL,
   FOREIGN KEY (rendelesID) REFERENCES Rendelesek(id),
